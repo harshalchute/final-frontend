@@ -145,14 +145,14 @@ const [totalPrice, setTotalPrice] = useState(0)
 
 
 useEffect(() => { 
-fetch(`http://localhost:6767/restaurant/details/${rName}`,{method:'GET'}) 
+fetch(`https://final-backend-a.herokuapp.com/restaurant/details/${rName}`,{method:'GET'}) 
 .then(response=>response.json()) 
 .then(data=>setRestaurant(data.data)) 
 }, [rName]) //behave like componentdidMount if second parameter is a blank array 
 
 
 const fetchMenu=()=>{ 
-fetch(`http://localhost:6767/menu/${rName}`,{method:'GET'}) 
+fetch(`https://final-backend-a.herokuapp.com/menu/${rName}`,{method:'GET'}) 
 .then(response=>response.json()) 
 .then(data=>setMenu(data.data)) 
 } 
@@ -184,7 +184,7 @@ const openRazorpay=async()=>{
   try{
   let orderData;
 
-  orderData = await fetch('http://localhost:6767/pay',{
+  orderData = await fetch('https://final-backend-a.herokuapp.com/pay',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({amount:totalPrice})
@@ -212,7 +212,7 @@ const openRazorpay=async()=>{
   },
   handler:function(response){
     //call api that would save transaction in db
-    fetch('http://localhost:6767/pay/save',{
+    fetch('https://final-backend-a.herokuapp.com/pay/save',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({

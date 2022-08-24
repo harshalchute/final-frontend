@@ -25,7 +25,7 @@ export default function Filter() {
 
     useEffect(() => {
     //fetch
-    fetch(`http://localhost:6767/restaurant/filter/${currentPageNo}`,requestOptions)
+    fetch(`https://final-backend-a.herokuapp.com/restaurant/filter/${currentPageNo}`,requestOptions)
     .then(response=>response.json())
     .then(data=>{
         setRestaurants(data.data);
@@ -36,7 +36,7 @@ export default function Filter() {
    
 
     useEffect(() => {
-    fetch(`http://localhost:6767/location`,{method:'GET'})
+    fetch(`https://final-backend-a.herokuapp.com/location`,{method:'GET'})
     .then(response=>response.json())
     .then(data=>{setLocation(data.data)})
 },[])
