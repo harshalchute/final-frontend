@@ -79,12 +79,7 @@ import Modal from 'react-modal';
 //           <div className='value'>{address}</div>
 //         </TabPanel>
 //   </Tabs>
-         <Link to='/filter'>
-           <button className='btn btn-light border border-dark'>
-            <span>
-            <img src={"https://w7.pngwing.com/pngs/403/20/png-transparent-computer-icons-filter-miscellaneous-angle-rectangle.png"}
-            alt="" height="15px" width="auto"/></span>Filter</button>
-        </Link>
+         
 //       </div>
 //       <div>
 //         <Modal 
@@ -283,6 +278,12 @@ Place Online Order
 <div className='value'>{address}</div> 
 </TabPanel> 
 </Tabs> 
+<Link to='/filter'>
+           <button className='btn btn-light border border-dark'>
+            <span>
+            <img src={"https://w7.pngwing.com/pngs/403/20/png-transparent-computer-icons-filter-miscellaneous-angle-rectangle.png"}
+            alt="" height="15px" width="auto"/></span>Filter</button>
+</Link>
 </div> 
 <div> 
 <Modal 
